@@ -8,7 +8,7 @@ class ListItems extends Component{
         return(
             <ul>
                 {this.props.items.map(item=>{
-                    return <li key={item.id}>{item.content}</li>
+                    return <li key={item.id}>{item.content}    <button onClick={()=> this.props.removeItem(item.id)}>X</button></li>
                 })}
             </ul>
         )

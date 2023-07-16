@@ -11,9 +11,13 @@ class TodoList extends Component{
             {content: "Mandela Day fun run", id: uuid()}
         ]}
         this.addItem = this.addItem.bind(this);
+        this.removeItem = this.removeItem.bind(this);
     }
     addItem(newItem){
         this.setState(state => ({items: [...state.items,  newItem]}))
+    }
+    removeItem(itemId){
+        this.setState(state => ({items: this.state.items.filter(item=> item.id !== itemId)}))
     }
     renderItems(){
         return(
@@ -28,7 +32,7 @@ class TodoList extends Component{
         return(
             <div>
                 <h1>TODO LIST</h1>
-                {this.renderItems()}
+                <ListItems items={this.state.items} removeItem={this.removeItem} />
                 <AddItemForm addItem={this.addItem}/>
             </div>
         )
