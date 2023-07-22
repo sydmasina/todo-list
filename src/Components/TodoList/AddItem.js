@@ -26,7 +26,7 @@ class AddItemForm extends Component{
                     <label htmlFor='content'>Todo Item: </label>
                     <input onChange={this.handleChange} value={this.state.content} name='content' id='content' />
                 </div>
-                <button onClick={this.handleAddItem}>Add Item</button>
+                <button className='todo-card-add-btn' onClick={this.handleAddItem}>Add Item</button>
             </form>
         )
     }
