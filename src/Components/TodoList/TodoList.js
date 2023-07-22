@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import ListItems from './ListItems';
 import AddItemForm from './AddItem';
 import { v4 as uuid } from 'uuid';
+import './TodoList.css'
 
 class TodoList extends Component{
     constructor(props){
@@ -30,10 +31,12 @@ class TodoList extends Component{
     }
     render(){
         return(
-            <div>
-                <h1>TODO LIST</h1>
-                <ListItems items={this.state.items} removeItem={this.removeItem} />
-                <AddItemForm addItem={this.addItem}/>
+            <div className='todo-flex-container'>
+                <div className='todo-card' >
+                    <h1>TODO LIST</h1>
+                    <ListItems items={this.state.items} removeItem={this.removeItem} />
+                    <AddItemForm addItem={this.addItem}/>
+                </div>
             </div>
         )
     }
