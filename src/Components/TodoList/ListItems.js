@@ -15,7 +15,10 @@ class ListItems extends Component{
             <ul>
                 {this.props.items.map(item=>{
                     return <li key={item.id}>{item.content}    
-                     <button className='todo-card-delete-btn' onClick={()=> this.props.removeItem(item.id)}>X</button>
+                    <div className='todo-card-btn-collect'>
+                        <button className='todo-card-edit-btn' onClick={()=> this.handleEdit(item.id)}><i class="fa fa-solid fa-pen"></i></button>
+                        <button className='todo-card-delete-btn' onClick={()=> this.props.removeItem(item.id)}><i className="fa fa-solid fa-trash"></i></button>
+                    </div>
                     </li>
                 })}
             </ul>

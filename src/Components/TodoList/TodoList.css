@@ -2,7 +2,7 @@
   box-shadow: 0 4px 8px 0 rgb(255, 25, 25);
   transition: 0.3s;
   border-radius: 5px;
-  width: 50%;
+  width: 70%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -11,6 +11,7 @@
   align-items: center;
   background-color: rgb(255, 25, 25);
   color: white;
+  margin-top: 100px;
 }
 .todo-flex-container{
     display: flex;
@@ -36,12 +37,31 @@
     margin-bottom: 6px;
 }
 .todo-card-delete-btn{
-   margin-left: 25px;
+  margin-left: 2px;
    color: white;
    border: none;
    border-radius: 3px;
-   background-color:  rgb(243, 129, 129);
+   padding: 5px;
+   background-color:  transparent;
 }
+
+.todo-card-delete-btn:hover{
+  background-color: rgb(252, 98, 98)
+}
+.todo-card-edit-btn{
+  margin-left: 2px;
+   color: white;
+   border: none;
+   border-radius: 3px;
+   padding: 5px;
+   background-color:  transparent;
+}
+
+.todo-card-edit-btn:hover{
+  background-color: rgb(252, 98, 98)
+}
+
+
 .todo-card-add-btn{
     background-color: #424fff; /* Green */
     border: none;
@@ -54,4 +74,7 @@
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
+}
+.todo-card-btn-collect{
+  margin-left: 20px;
 }
