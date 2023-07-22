@@ -5,10 +5,7 @@ import TodoList from './Components/TodoList/TodoList';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-       <TodoList />
-      </header>
+      <TodoList />
     </div>
   );
 }
